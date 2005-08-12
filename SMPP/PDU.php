@@ -237,16 +237,6 @@ class Net_SMPP_PDU
             $descs =& Net_SMPP_PDU::_statusDescs();
         }
 
-        // Vendor statuses override the defaults.
-        if ($this->isVendor()) {
-            $v =& Net_SMPP_Vendor::singleton($this->vendor);
-            $vdescs =& $v->_statusDescs();
-            unset($v);
-            if (isset($vdescs[$st])) {
-                return $vdescs[$st];
-            }
-        }
-
         if (isset($descs[$st])) {
             return $descs[$st];
         }
