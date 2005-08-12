@@ -1,0 +1,1765 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- $Id: package.xml,v 1.1 2005-08-12 19:41:57 ieure Exp $ -->
+<package version="1.0">
+    <name>Net_SMPP</name>
+    <summary>SMPP v3.4 protocol implementation</summary>
+    <description><![CDATA[
+        Net_SMPP is an implementation of the SMPP (Short Message Peer-to-Peer) v3.4 protocol. SMPP is an open protocol used in the wireless industry to send and recieve SMS messages.
+
+        Net_SMPP does not provide a SMPP client or server, but they can easily be built with it.
+    ]]></description>
+    <maintainers>
+        <maintainer>
+            <user>ieure</user>
+            <name>Ian Eure</name>
+            <email>ieure@php.net</email>
+            <role>lead</role>
+        </maintainer>
+    </maintainers>
+
+    <release>
+        <version>0.4.2</version>
+        <date>2005-08-03</date>
+        <license>PHP License v3.0</license>
+        <state>beta</state>
+        <notes><![CDATA[
+            - Fix constants; ESME_* -> NET_SMPP_ESME_*
+            - Update copyright attribution
+            - Add COPYING doc.
+        ]]></notes>
+
+        <deps>
+            <dep type="pkg" rel="ge" version="1.3">PEAR</dep>
+            <dep type="php" rel="ge" version="4.1.0"/>
+        </deps>
+
+        <filelist>
+            <file role="php" baseinstalldir="Net" name="SMPP.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+            <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+            <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+
+            <!-- Commands -->
+            <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+            <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+            <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+            <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+            <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+            <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+            <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+            <file role="php" baseinstalldir="Net/SMPP" name="Command/data_sm.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+            <file role="php" baseinstalldir="Net/SMPP" name="Command/data_sm_resp.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+
+            <!-- Vendor support -->
+            <file role="php" baseinstalldir="Net/SMPP" name="Vendor.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+            <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+            <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+            <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/data_sm.php">
+                <replace from="@package_version@" to="version" type="package-info"/>
+            </file>
+
+            <!-- Docs -->
+            <file role="doc" name="COPYING"/>
+        </filelist>
+    </release>
+
+    <changelog>
+        <release>
+            <version>0.4.1</version>
+            <date>2005-06-10</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Change ESME_* constants to NET_SMPP_ESME_*
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/data_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/data_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/data_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.4.0</version>
+            <date>2005-06-02</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Add data_sm/data_sm_resp PDUs.
+                            - Rework vendor code.
+                            - Fix message_payload type in submit_sm/data_sm.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/data_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/data_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/data_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.3.7</version>
+            <date>2005-05-04</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Silence warnings with vendor PDUs on ancient PHP versions.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.3.6</version>
+            <date>2005-05-04</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Work around buggy unpack() in earlier versions of PHP.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.3.5</version>
+            <date>2005-05-02</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Use the correct (new) mBlox vendor support class
+                            - Improve the mBlox submit_sm PDU class.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.3.4</version>
+            <date>2005-04-25</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Move global vars into static class vars.
+                            - Rework vendor support to use new statics instead of globals.
+                            - Remove unused GLOBAL tags from several functions.
+                            - Use the new statics throughout the code.
+                            - Fix parsing octet strings.
+                            - Move command list into Command class.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.3.3</version>
+            <date>2005-04-20</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Add support for Octet Strings, which are not NULL terminated.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.3.2</version>
+            <date>2005-04-20</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Fix incrementing global sequence number when parsing a response PDU.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.3.1</version>
+            <date>2005-04-20</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Fix isRequest/Response(), they were trying to do bitwise operations on a string.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.3.0</version>
+            <date>2005-04-20</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Fix bad length calculation of short_message in submit_sm.
+                            - Work around retarded type abuse by mBlox in Command::_generateOptHeader().
+                            - Make the PDU command backreference the main command array.
+                            - Add commandCode()/commandName() to ::Client.
+                            - Replace instances that used $_net_smpp_pdu_commands/_back with calls to commandCode/Name().
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.2.9</version>
+            <date>2005-04-20</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Fix bad length in optional parameter header.
+                            - Fix parsing optional parameters, $pos was incremented twice.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.2.8</version>
+            <date>2005-04-19</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Fix vendor profiles, load Command class first.
+                            - Fix vendor error descriptions.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.2.7</version>
+            <date>2005-04-19</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Fix PDU::factory().
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.2.6</version>
+            <date>2005-04-19</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Remove debug message from Command::set().
+                            - Fix borken submit_sm PDU class.
+                            - Add prep() support to PDUs e.g. for calculating length in submit_sm.
+                            - Add vendor-specific support; move mBlox stuff to vendor classes.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Commands -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+
+                <!-- Vendor support -->
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Vendor/mBlox/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.2.5dev5</version>
+            <date>2005-04-14</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Remove debug message from Command::set().
+                            - Fix borken submit_sm PDU class.
+                            - Add prep() support to PDUs e.g. for calculating length in submit_sm.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.2.4</version>
+            <date>2005-04-14</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Document submit_sm.
+                            - Add mBlox optional params to submit_sm & Command.
+                            - Fix parsing stuff, handle fixed-length strings.
+                            - Add some constants to make PDU setup easier.
+                            - Don't silence errors in PDU::factory().
+                            - Fix borken class names in some command classes.
+                            - Fix PDU::getStatusDesc().
+                            - Fix passing initial values in SMPP::PDU().
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.2.3</version>
+            <date>2005-04-14</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Fix header extraction in PDU::parse().
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.2.2</version>
+            <date>2005-04-14</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Update docs.
+                            - Remove unused COMMAND_REQUIRED/_OPTIONAL const usage.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.2.1</version>
+            <date>2005-04-14</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Work around retarded PHP bug #32700 in PDU::extractCommand()
+                            - Split Command::parseParams() into _parseFixed() and _parseVar().
+                            - Add parseOptionalParams().
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.2.0</version>
+            <date>2005-04-12</date>
+            <license>PHP License v3.0</license>
+            <state>alpha</state>
+            <notes><![CDATA[
+                            - Update docs for globals, defines, etc.
+                            - Update package description.
+                            - Add $status arg to PDU::statusDesc().
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.0.1dev13</version>
+            <date>2005-04-08</date>
+            <license>PHP License v3.0</license>
+            <state>devel</state>
+            <notes><![CDATA[
+                            - Really? fix PDU::parse()
+                            - Rearrange things a bit. Net_SMPP_Command_foo is now the top-level class, and Net_SMPP_Command now extends Net_SMPP_PDU. Only one Command instance may exist in Command::$params.
+                            - Update docs and such for bind_transmitter/_resp
+                            - Improve error handling functions
+                            - Improve Net_SMPP class; add PDU() and parsePDU().
+                            - Remove client class, this will be moved to a separate package.
+                            - Add new command classes: unbind/_resp, submit_sm_resp & generic_nack.
+                            - Move factory() from Net_SMPP_Command to Net_SMPP_PDU.
+                            - Fix Command's constructor, and PDU::factory().
+                            - Don't change member vars in PDU::generate().
+                            - Fix some weird issues with PDU::generate().
+                            - Fix PDU::extractCommand().
+                            - Fix header parsing in PDU::parse().
+                            - Fix off-by-one error while parsing strings in Command::parseParams().
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/generic_nack.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/unbind_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.0.1dev12</version>
+            <date>2005-04-08</date>
+            <license>PHP License v3.0</license>
+            <state>devel</state>
+            <notes><![CDATA[
+                            - Fix PDU::parse()
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="pkg" rel="ge" version="1.0.6">Net_Socket</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Client.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.0.1dev11</version>
+            <date>2005-04-08</date>
+            <license>PHP License v3.0</license>
+            <state>devel</state>
+            <notes><![CDATA[
+                            - Use !isset() in Command::generate() instead of === null.
+                            - Fix optional_params GLOBAL var in Command::generate().
+                            - Fix bad logic error in Command::generate() which caused it to treat all fields as optional.
+                            - Don't set other fields to null in Command::set().
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="pkg" rel="ge" version="1.0.6">Net_Socket</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Client.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.0.1dev10</version>
+            <date>2005-04-08</date>
+            <license>PHP License v3.0</license>
+            <state>devel</state>
+            <notes><![CDATA[
+                            - Add optional paramater support to Net_SMPP_Command::generate().
+                            - Fill out submit_sm class with optional paramater defs.
+                            - Fix Net_SMPP_PDU::generate(), was checking wrong member for paramaters.
+                            - Fix generation of PDU length in Net_SMPP_PDU::generate().
+                            - Fix pack() byte-ordering, should be 'N' instead of 'L'.
+                            - Add Net_SMPP_PDU::accept().
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="pkg" rel="ge" version="1.0.6">Net_Socket</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Client.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.0.1dev9</version>
+            <date>2005-04-07</date>
+            <license>PHP License v3.0</license>
+            <state>devel</state>
+            <notes><![CDATA[
+                            - Remove print_r from Net_SMPP_Command::factory()
+                            - Fix Net_SMPP_Command::generate()
+                            - Fixed dumb error in Net_SMPP_Command's 4.x constructor
+                            - Fixed Net_SMPP_Command::set(), wasn't using the key from $_defs in the $args lookup.
+                            - Use null character (zero byte), not PHP's null const in Net_SMPP_Command::set().
+                            - Lots of cleanups in parse() and generate() methods.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="pkg" rel="ge" version="1.0.6">Net_Socket</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Client.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.0.1dev8</version>
+            <date>2005-04-07</date>
+            <license>PHP License v3.0</license>
+            <state>devel</state>
+            <notes><![CDATA[
+                            - Really actually fix Net_SMPP_Command::factory()
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="pkg" rel="ge" version="1.0.6">Net_Socket</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Client.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.0.1dev7</version>
+            <date>2005-04-07</date>
+            <license>PHP License v3.0</license>
+            <state>devel</state>
+            <notes><![CDATA[
+                            - Actually fix Net_SMPP_Command::factory()
+                            - Fix command file location in package.xml
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="pkg" rel="ge" version="1.0.6">Net_Socket</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Client.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.0.1dev6</version>
+            <date>2005-04-07</date>
+            <license>PHP License v3.0</license>
+            <state>devel</state>
+            <notes><![CDATA[
+                            - Fix Net_SMPP_Command::factory()
+                            - Add (unfinished) submit_sm command class.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="pkg" rel="ge" version="1.0.6">Net_Socket</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Client.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP/Command" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP/Command" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP/Command" name="Command/submit_sm.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.0.1dev5</version>
+            <date>2005-04-07</date>
+            <license>PHP License v3.0</license>
+            <state>devel</state>
+            <notes><![CDATA[
+                            - Debug
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="pkg" rel="ge" version="1.0.6">Net_Socket</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Client.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP/Command" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP/Command" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.0.1dev4</version>
+            <date>2005-04-07</date>
+            <license>PHP License v3.0</license>
+            <state>devel</state>
+            <notes><![CDATA[
+                            - Allow specifying SMPP command in PDU class constructor.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="pkg" rel="ge" version="1.0.6">Net_Socket</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Client.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP/Command" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP/Command" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.0.1dev3</version>
+            <date>2005-04-07</date>
+            <license>PHP License v3.0</license>
+            <state>devel</state>
+            <notes><![CDATA[
+                            - Extend command support a bit.
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="pkg" rel="ge" version="1.0.6">Net_Socket</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Client.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP/Command" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP/Command" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.0.1dev2</version>
+            <date>2005-04-07</date>
+            <license>PHP License v3.0</license>
+            <state>devel</state>
+            <notes><![CDATA[
+                            - Add base command/param support
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="pkg" rel="ge" version="1.0.6">Net_Socket</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Client.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Command.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP/Command" name="Command/bind_transmitter.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP/Command" name="Command/bind_transmitter_resp.php">
+                    <replace from="@package_version@" to="version" type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+        <release>
+            <version>0.0.1dev1</version>
+            <date>2005-04-06</date>
+            <license>PHP License v3.0</license>
+            <state>devel</state>
+            <notes><![CDATA[
+                - Initial coding/PEARification.
+            ]]></notes>
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3.0">PEAR</dep>
+                <dep type="pkg" rel="ge" version="1.0.6">Net_Socket</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <file role="php" baseinstalldir="Net" name="SMPP.php">
+                    <replace from="@package_version@" to="version"
+                             type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="PDU.php">
+                    <replace from="@package_version@" to="version"
+                             type="package-info"/>
+                </file>
+                <file role="php" baseinstalldir="Net/SMPP" name="Client.php">
+                    <replace from="@package_version@" to="version"
+type="package-info"/>
+                </file>
+            </filelist>
+        </release>
+    </changelog>
+</package>

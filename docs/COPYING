@@ -1,0 +1,108 @@
+Net_SMPP is (c) Copyright 2004, 2005 WebSprockets LLC. Portions of the
+documentation are reproduced with permission from the SMPP v3.4 Specification,
+Issue 1.2, and are (c) Copyright 1999 SMPP Developers Forum.
+
+Net_SMPP is licensed under the PHP License, v3.0, which may be found here:
+http://www.php.net/license/3_0.txt
+
+
+
+
+-- snip --
+
+Subject: Re: [SUPPORT] Re: Request to reproduce SMPP v3.4 specification in part
+From: SMS Forum Support <support@smsforum.net>
+To: Ian Eure <ieure@websprockets.com>
+Organization: SMS Forum
+Date: Fri, 03 Jun 2005 23:11:37 +0200
+
+
+Thats fine.. I might suggest you add the section reference to the same
+comment only for encouraging the reader to look at the spec for more
+detail.. but either way what you have there is OK by me.=20
+
+Text copies are fine.. I was more worried about documentation that might
+replicate entire pages and sections etc.. this is where we stand strict
+because it encourages variant specifications and as you would
+understand, thats dangerous.
+
+Thats fine.. I might suggest you add the section reference to the same
+comment only for encouraging the reader to look at the spec for more
+detail.. but either way what you have there is OK by me.
+
+Text copies are fine.. I was more worried about documentation that might
+replicate entire pages and sections etc.. this is where we stand strict
+because it encourages variant specifications and as you would
+understand, thats dangerous.
+
+On Fri, 2005-06-03 at 12:25 -0700, Ian Eure wrote:
+
+> On Friday 03 June 2005 11:47 am, you wrote:
+> > Ian,
+> >   as long as the quotations are small and not complete chapter
+> > quotations, then this is fine. Under no circumstances are entire
+> > sections or graphics to be copied. We would appreciate if you provide a
+> > link reference to www.smsforum.net as the download point for the doc. or
+> > more specifically to the download link
+> > http://smsforum.net/doc/download.php?id=smppv34
+> >
+> Basically, the only things I'm using are the descriptions of the individual
+> PDUs and their parameters. Here's an example, from the submit_sm PDU code:
+>
+>     /**
+>      * SMS application associated with this message
+>      *
+>      * Specifying the service_type allows the ESME to
+>      *  - avail of enhanced messaging services such as “replace by service”
+>      *    type
+>      *  - to control the teleservice used on the air interface.
+>      *
+>      * The following generic service_types are defined:
+>      *
+>      * ““ (NULL) Default
+>      * “CMT”     Cellular Messaging
+>      * “CPT”     Cellular Paging
+>      * “VMN”     Voice Mail Notification
+>      * “VMA”     Voice Mail Alerting
+>      * “WAP”     Wireless Application Protocol
+>      * “USSD”    Unstructured Supplementary Services Data
+>      *
+>      * Set to NULL for default SMSC settings.
+>      *
+>      * @var  string
+>      */
+>     var $service_type = null;
+>
+> Is this acceptable, or is that too much?
+>
+>
+> > Please do not include an electronic of the specification with any of
+> > your software.. we prefer to be the sole distributor of the
+> > specification. If you are offering printed documentation as part of a
+> > boxed somution, then it is permitted to include a full printout of the
+> > specification from front to end without any pages omitted.
+> >
+> I'm not providing a boxed solution, or anything like that.
+>
+> I'm not including the complete specification, and I will make sure I add a
+> link back to the official download page.
+>
+> _______________________________________________
+> support site list
+> support@smsforum.net
+> http://green.mynethost.com/mailman/listinfo/support_126047
+
+--
+
+Regards,
+   Cormac
+--------------------------------------------------------------
+Technical Moderator & Webmaster
+SMS Forum
+http://www.smsforum.net
+--------------------------------------------------------------
+
+-- snip --
+
+--
+$Id$
