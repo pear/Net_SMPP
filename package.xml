@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- $Id: package.xml,v 1.2 2005-08-12 20:07:55 ieure Exp $ -->
+<!-- $Id: package.xml,v 1.3 2005-09-17 02:35:44 ieure Exp $ -->
 <package version="1.0">
     <name>Net_SMPP</name>
     <summary>SMPP v3.4 protocol implementation</summary>
@@ -18,15 +18,12 @@
     </maintainers>
 
     <release>
-        <version>0.4.3</version>
-        <date>2005-08-12</date>
+        <version>0.4.4</version>
+        <date>2005-09-16</date>
         <license>PHP License v3.0</license>
         <state>beta</state>
         <notes><![CDATA[
-            - Initial PEAR release.
-            - Conform to PEAR package directory structure.
-            - Add example.
-            - Remove old vendor code from PDU::statusDesc().
+            - Add constants for esm_class paramater.
         ]]></notes>
 
         <deps>
@@ -104,6 +101,91 @@
     </release>
 
     <changelog>
+        <release>
+            <version>0.4.3</version>
+            <date>2005-08-12</date>
+            <license>PHP License v3.0</license>
+            <state>beta</state>
+            <notes><![CDATA[
+                            - Initial PEAR release.
+                            - Conform to PEAR package directory structure.
+                            - Add example.
+                            - Remove old vendor code from PDU::statusDesc().
+                            ]]></notes>
+
+            <deps>
+                <dep type="pkg" rel="ge" version="1.3">PEAR</dep>
+                <dep type="php" rel="ge" version="4.1.0"/>
+            </deps>
+
+            <filelist>
+                <dir name="/" baseinstalldir="Net">
+                    <file role="php" name="SMPP.php">
+                        <replace from="@package_version@" to="version" type="package-info"/>
+                    </file>
+                    <dir name="SMPP">
+                        <file role="php" name="PDU.php">
+                            <replace from="@package_version@" to="version" type="package-info"/>
+                        </file>
+                        <file role="php" name="Command.php">
+                            <replace from="@package_version@" to="version" type="package-info"/>
+                        </file>
+                        <file role="php" name="Vendor.php">
+                            <replace from="@package_version@" to="version" type="package-info"/>
+                        </file>
+
+                        <!-- Commands -->
+                        <dir name="Command">
+                            <file role="php" name="generic_nack.php">
+                                <replace from="@package_version@" to="version" type="package-info"/>
+                            </file>
+                            <file role="php" name="bind_transmitter.php">
+                                <replace from="@package_version@" to="version" type="package-info"/>
+                            </file>
+                            <file role="php" name="bind_transmitter_resp.php">
+                                <replace from="@package_version@" to="version" type="package-info"/>
+                            </file>
+                            <file role="php" name="submit_sm.php">
+                                <replace from="@package_version@" to="version" type="package-info"/>
+                            </file>
+                            <file role="php" name="submit_sm_resp.php">
+                                <replace from="@package_version@" to="version" type="package-info"/>
+                            </file>
+                            <file role="php" name="unbind.php">
+                                <replace from="@package_version@" to="version" type="package-info"/>
+                            </file>
+                            <file role="php" name="unbind_resp.php">
+                                <replace from="@package_version@" to="version" type="package-info"/>
+                            </file>
+                            <file role="php" name="data_sm.php">
+                                <replace from="@package_version@" to="version" type="package-info"/>
+                            </file>
+                            <file role="php" name="data_sm_resp.php">
+                                <replace from="@package_version@" to="version" type="package-info"/>
+                            </file>
+                        </dir>
+
+                        <!-- Vendor support -->
+                        <dir name="Vendor">
+                            <file role="php" name="mBlox.php">
+                                <replace from="@package_version@" to="version" type="package-info"/>
+                            </file>
+                            <dir name="mBlox">
+                                <file role="php" name="submit_sm.php">
+                                    <replace from="@package_version@" to="version" type="package-info"/>
+                                </file>
+                                <file role="php" name="data_sm.php">
+                                    <replace from="@package_version@" to="version" type="package-info"/>
+                                </file>
+                            </dir>
+                        </dir>
+                    </dir>
+                </dir>
+                <!-- Docs -->
+                <file role="doc" name="docs/COPYING"/>
+                <file role="doc" name="docs/examples/example.php"/>
+            </filelist>
+        </release>
         <release>
             <version>0.4.2</version>
             <date>2005-08-03</date>
