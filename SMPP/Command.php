@@ -88,6 +88,37 @@ define('NET_SMPP_LANG_FR',      0x02);
 define('NET_SMPP_LANG_ES',      0x03);
 define('NET_SMPP_LANG_DE',      0x04);
 
+/**
+ * SMPP v3.4 esm_class values
+ *
+ * @see  Net_SMPP_Command_submit_sm::$esm_class
+ */
+// Default SMSC Mode (e.g. Store and Forward)
+define('NET_SMPP_MSGMODE_DEFAULT',      0x00);
+// Datagram mode
+define('NET_SMPP_MSGMODE_DATAGRAM',     0x01);
+// Forward (i.e. Transaction) mode
+define('NET_SMPP_MSGMODE_FORWARD' ,     0x02);
+// Store and Forward mode (use to select Store and Forward mode if Default
+// SMSC Mode is non Store and Forward)
+define('NET_SMPP_MSGMODE_STOREFORWARD', 0x03);
+
+// Default message Type (i.e. normal message)
+define('NET_SMPP_MSGTYPE_DEFAULT',      0x00);
+// Short Message contains ESME Delivery Acknowledgement
+define('NET_SMPP_MSGTYPE_DELIVERYACK',  0x08);
+// Short Message contains ESME Manual/User Acknowledgement
+define('NET_SMPP_MSGTYPE_USERACK',      0x10);
+
+// No specific features selected
+define('NET_SMPP_GSMFEAT_NONE',          0x00);
+// UDHI Indicator (only relevant for MT short messages)
+define('NET_SMPP_GSMFEAT_UDHI',          0x40);
+// Set Reply Path (only relevant for GSM network)
+define('NET_SMPP_GSMFEAT_REPLYPATH',     0x80);
+// Set UDHI and Reply Path (only relevant for GSM network)
+define('NET_SMPP_GSMFEAT_UDHIREPLYPATH', 0xC0);
+
 
 /**
  * Base Net_SMPP PDU command class
