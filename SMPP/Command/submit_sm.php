@@ -153,9 +153,16 @@ class Net_SMPP_Command_submit_sm extends Net_SMPP_Command
     /**
      * Indicates Message Mode & Message Type.
      *
+     * This is a bitwise field to specify the message mode, type, and GSM features.
+     * See the NET_SMPP_MSGMODE_*, NET_SMPP_MSGTYPE_*, and NET_SMPP_GSMFEAT_*
+     * constants for possible values.
+     *
+     * You will need to set this if your message has a User Data Header (UDH),
+     * for example if you are sending WAP Push messages via SMPP.
+     *
      * @var  int
      */
-    var $esm_class;
+    var $esm_class = NET_SMPP_MSGMODE_DEFAULT;
 
     /**
      * Protocol Identifier.
