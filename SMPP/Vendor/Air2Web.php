@@ -30,11 +30,12 @@ require_once 'Net/SMPP/Vendor.php';
 /**
  * Possible values for Premium_content_indicator
  */
-define('NET_SMPP_AIR2WEB_PREMIUM_099',  7); // $0.99
-define('NET_SMPP_AIR2WEB_PREMIUM_150',  9); // $1.50
-define('NET_SMPP_AIR2WEB_PREMIUM_199', 10); // $1.99
-define('NET_SMPP_AIR2WEB_PREMIUM_299', 13); // $2.99
-define('NET_SMPP_AIR2WEB_PREMIUM_399',  3); // $3.99
+define('NET_SMPP_AIR2WEB_PREMIUM_099',  '7'); // $0.99
+define('NET_SMPP_AIR2WEB_PREMIUM_150',  '9'); // $1.50
+define('NET_SMPP_AIR2WEB_PREMIUM_199', '10'); // $1.99
+define('NET_SMPP_AIR2WEB_PREMIUM_299', '13'); // $2.99
+define('NET_SMPP_AIR2WEB_PREMIUM_399',  '3'); // $3.99
+define('NET_SMPP_AIR2WEB_PREMIUM_499',  '4'); // $4.99
 
 /**
  * Air2Web submit_sm rejection codes
