@@ -69,7 +69,7 @@ class Net_SMPP_Command_foo_bar extends Net_SMPP_Command
              * terminator, if any
              */
             'max' => 45
-        );
+        )
     );
 
     /**
