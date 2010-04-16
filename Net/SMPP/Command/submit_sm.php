@@ -48,7 +48,7 @@ require_once 'Net/SMPP/Command.php';
  * @since      Release 0.0.1dev6
  * @link       http://pear.php.net/package/Net_SMPP
  */
-class Net_SMPP_Command_submit_sm extends Net_SMPP_Command
+class Net_SMPP_Command_Submit_Sm extends Net_SMPP_Command
 {
     /**
      * SMS application associated with this message

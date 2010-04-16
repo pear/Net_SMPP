@@ -46,7 +46,7 @@ require_once 'Net/SMPP/Command.php';
  * @since      Release 0.0.1dev6
  * @link       http://pear.php.net/package/Net_SMPP
  */
-class Net_SMPP_Command_submit_sm_resp extends Net_SMPP_Command
+class Net_SMPP_Command_Submit_Sm_Resp extends Net_SMPP_Command
 {
     /**
      * This field contains the SMSC message ID of the submitted message.

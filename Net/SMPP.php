@@ -34,6 +34,8 @@
 
 // Place includes, constant defines and $_GLOBAL settings here.
 
+define('MAX_SEQ', 2147483646);
+
 /**
  * Main Net_SMPP class
  *
@@ -66,6 +68,11 @@ class Net_SMPP
         if (!isset($sequence)) {
             $sequence = 0;
         }
+        
+        if ($sequence == MAX_SEQ) {
+            $sequence = 0;
+        }
+        
         return ++$sequence;
     }
 
@@ -77,7 +84,7 @@ class Net_SMPP
      * @see     Net_SMPP_PDU::factory()
      * @static
      */
-    function &PDU($command, $args = array())
+    function PDU($command, $args = array())
     {
         require_once 'Net/SMPP/PDU.php';
         return Net_SMPP_PDU::factory($command, $args);
@@ -94,7 +101,7 @@ class Net_SMPP
         require_once 'Net/SMPP/PDU.php';
         $command = Net_SMPP_PDU::extractCommand($data);
         if ($command === false) {
-            return $false;
+            return false;
         }
         $pdu =& Net_SMPP::PDU($command, array('sequence' => 'dummy'));
         $pdu->parse($data);

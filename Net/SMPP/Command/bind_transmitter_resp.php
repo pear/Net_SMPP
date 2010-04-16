@@ -47,7 +47,7 @@ require_once 'Net/SMPP/Command.php';
  * @since      Release 0.0.1dev2
  * @link       http://pear.php.net/package/Net_SMPP
  */
-class Net_SMPP_Command_bind_transmitter_resp extends Net_SMPP_Command
+class Net_SMPP_Command_Bind_Transmitter_Resp extends Net_SMPP_Command
 {
     /**
      * SMSC identifier.

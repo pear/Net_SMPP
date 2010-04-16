@@ -195,6 +195,8 @@ class Net_SMPP_Command extends Net_SMPP_PDU
         $this->command = $command;
         if (!isset($args['sequence'])) {
             $this->sequence = Net_SMPP::nextSeq();
+        } else {
+            $this->sequence = $args['sequence'];
         }
         $this->status = NET_SMPP_ESME_ROK;
 

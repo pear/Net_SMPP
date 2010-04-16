@@ -46,7 +46,7 @@ require_once 'Net/SMPP/Command.php';
  * @since      Release
  * @link       http://pear.php.net/package/Net_SMPP
  */
-class Net_SMPP_Command_unbind_resp extends Net_SMPP_Command
+class Net_SMPP_Command_Unbind_Resp extends Net_SMPP_Command
 {
     /**
      * Paramater definitions for this command

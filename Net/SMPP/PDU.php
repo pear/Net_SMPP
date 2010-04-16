@@ -163,7 +163,7 @@ class Net_SMPP_PDU
      * @param   array   $args     Arguments to set in the instance
      * @return  mixed   boolean false or Net_SMPP_Command instance
      */
-    function &factory($command, $args = array()) {
+    function factory($command, $args = array()) {
         $class = 'Net_SMPP_Command_' . $command;
         $file = 'Net/SMPP/Command/' . $command . '.php';
 

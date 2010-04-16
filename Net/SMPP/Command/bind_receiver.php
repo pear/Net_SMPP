@@ -1,9 +1,8 @@
 <?php
-
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
- * SMPP v3.4 bind_transmitter command class and data
+ * SMPP v3.4 bind_receiver command class and data
  *
  * PHP versions 4 and 5
  *
@@ -15,14 +14,12 @@
  *
  * @category   Networking
  * @package    Net_SMPP
- * @author     Ian Eure <ieure@php.net>
- * @copyright  (c) Copyright 2005 WebSprockets, LLC.
+ * @author     Silospen <silospen@silospen.com>
  * @copyright  Portions of the documentation (c) Copyright 1999 SMPP Developers
  *             Forum.
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
- * @version    Release: @package_version@
- * @version    CVS:     $Revision$
- * @since      Release 0.0.1dev2
+ * @version    SVN: $Id$
+ * @since      Release
  * @link       http://pear.php.net/package/Net_SMPP
  */
 
@@ -34,24 +31,25 @@ define('NET_SMPP_VERSION_33', 0x33);
 define('NET_SMPP_VERSION_34', 0x34);
 
 /**
- * bind_transmitter class
+ * bind_receiver class
  *
+ * An ESME bound as a Receiver is authorised to receive short messages from the SMSC and to
+ * return the corresponding SMPP message responses to the SMSC.
+ * 
  * @category   Networking
  * @package    Net_SMPP
- * @author     Ian Eure <ieure@php.net>
- * @copyright  (c) Copyright 2005 WebSprockets, LLC.
+ * @author     Silospen <silospen@silospen.com>
  * @copyright  Portions of the documentation (c) Copyright 1999 SMPP Developers
  *             Forum.
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    Release: @package_version@
- * @version    CVS:     $Revision$
- * @since      Release 0.0.1dev2
+ * @since      Release
  * @link       http://pear.php.net/package/Net_SMPP
  */
-class Net_SMPP_Command_Bind_Transmitter extends Net_SMPP_Command
+class Net_SMPP_Command_Bind_Receiver extends Net_SMPP_Command
 {
     /**
-     * Identifies the ESME system requesting to bind as a transmitter with the SMSC.
+     * Identifies the ESME system requesting to bind as a receiver with the SMSC.
      *
      * The recommended use of system_id is to identify the binding entity, e.g.,
      * “InternetGW” in the case of an Internet Gateway or ‘VMS’ for a Voice

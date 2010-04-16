@@ -65,7 +65,7 @@ require_once 'Net/SMPP/Command.php';
  * @since      Release 0.3.8
  * @link       http://pear.php.net/package/Net_SMPP
  */
-class Net_SMPP_Command_data_sm extends Net_SMPP_Command
+class Net_SMPP_Command_Data_Sm extends Net_SMPP_Command
 {
     /**
      * @see Net_SMPP_Command_submit_sm::$service_type

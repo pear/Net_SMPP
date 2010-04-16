@@ -1,9 +1,8 @@
 <?php
-
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
- * SMPP v3.4 unbind command class and/or data
+ * SMPP v3.4 enquire_link command class and/or data
  *
  * PHP versions 4 and 5
  *
@@ -15,13 +14,11 @@
  *
  * @category   Networking
  * @package    Net_SMPP
- * @author     Ian Eure <ieure@php.net>
- * @copyright  (c) Copyright 2005 WebSprockets, LLC.
+ * @author     Silospen <silospen@silospen.com>
  * @copyright  Portions of the documentation (c) Copyright 1999 SMPP Developers
  *             Forum.
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
- * @version    Release: @package_version@
- * @version    CVS:     $Revision$
+ * @version    SVN: $Id$
  * @since      Release
  * @link       http://pear.php.net/package/Net_SMPP
  */
@@ -30,23 +27,26 @@
 require_once 'Net/SMPP/Command.php';
 
 /**
- * unbind class
+ * enquire_link class
  *
- * This command has no paramaters
+ * This message can be sent by either the ESME or SMSC and is used to provide a confidence-
+ * check of the communication path between an ESME and an SMSC. On receipt of this request
+ * the receiving party should respond with an enquire_link_resp, thus verifying that the
+ * application level connection between the SMSC and the ESME is functioning. The ESME may
+ * also respond by sending any valid SMPP primitive.
+ * 
  *
  * @category   Networking
  * @package    Net_SMPP
- * @author     Ian Eure <ieure@php.net>
- * @copyright  (c) Copyright 2005 WebSprockets, LLC.
+ * @author     Silospen <silospen@silospen.com>
  * @copyright  Portions of the documentation (c) Copyright 1999 SMPP Developers
  *             Forum.
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    Release: @package_version@
- * @version    CVS:     $Revision$
  * @since      Release
  * @link       http://pear.php.net/package/Net_SMPP
  */
-class Net_SMPP_Command_Unbind extends Net_SMPP_Command
+class Net_SMPP_Command_Enquire_Link extends Net_SMPP_Command
 {
     /**
      * Paramater definitions for this command

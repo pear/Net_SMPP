@@ -59,7 +59,7 @@ require_once 'Net/SMPP/Command.php';
  * @since      Release 0.0.1dev2
  * @link       http://pear.php.net/package/Net_SMPP
  */
-class Net_SMPP_Command_generic_nack extends Net_SMPP_Command
+class Net_SMPP_Command_Generic_Nack extends Net_SMPP_Command
 {
     /**
      * Paramater definitions for this command

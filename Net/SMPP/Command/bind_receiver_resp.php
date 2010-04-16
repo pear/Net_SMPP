@@ -1,9 +1,8 @@
 <?php
-
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
- * SMPP v3.4 unbind command class and/or data
+ * SMPP v3.4 bind_receiver_resp command class
  *
  * PHP versions 4 and 5
  *
@@ -15,13 +14,11 @@
  *
  * @category   Networking
  * @package    Net_SMPP
- * @author     Ian Eure <ieure@php.net>
- * @copyright  (c) Copyright 2005 WebSprockets, LLC.
+ * @author     Silospen <silospen@silospen.com>
  * @copyright  Portions of the documentation (c) Copyright 1999 SMPP Developers
  *             Forum.
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
- * @version    Release: @package_version@
- * @version    CVS:     $Revision$
+ * @version    SVN: $Id$
  * @since      Release
  * @link       http://pear.php.net/package/Net_SMPP
  */
@@ -30,30 +27,55 @@
 require_once 'Net/SMPP/Command.php';
 
 /**
- * unbind class
+ * bind_receiver_resp class
  *
- * This command has no paramaters
+ * This holds the data sent back from the SMSC after sending a bind_transmitter
+ * command.
  *
  * @category   Networking
  * @package    Net_SMPP
- * @author     Ian Eure <ieure@php.net>
- * @copyright  (c) Copyright 2005 WebSprockets, LLC.
+ * @author     Silospen <silospen@silospen.com>
  * @copyright  Portions of the documentation (c) Copyright 1999 SMPP Developers
  *             Forum.
  * @license    http://www.php.net/license/3_0.txt  PHP License 3.0
  * @version    Release: @package_version@
- * @version    CVS:     $Revision$
  * @since      Release
  * @link       http://pear.php.net/package/Net_SMPP
  */
-class Net_SMPP_Command_Unbind extends Net_SMPP_Command
+class Net_SMPP_Command_Bind_Receiver_Resp extends Net_SMPP_Command
 {
     /**
-     * Paramater definitions for this command
+     * SMSC identifier.
+     *
+     * Identifies the SMSC to the ESME.
+     *
+     * @var  string
+     */
+    var $system_id;
+
+    /**
+     * SMPP version supported by SMSC
+     *
+     * @var  int
+     */
+    var $sc_interface_version;
+
+    /**
+     * Paramater definitions
      *
      * @var     array
      * @access  protected
      * @see     Net_SMPP_Command::$_defs
      */
-    var $_defs = array();
+    var $_defs = array(
+        'system_id' => array(
+            'type' => 'string',
+            'max' => 16
+        ),
+        // Optional paramaters
+        'sc_interface_version' => array(
+            'type' => 'int',
+            'size' => 1
+        )
+    );
 }

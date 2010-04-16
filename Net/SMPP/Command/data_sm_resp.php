@@ -65,7 +65,7 @@ require_once 'Net/SMPP/Command.php';
  * @since      Release 0.3.8
  * @link       http://pear.php.net/package/Net_SMPP
  */
-class Net_SMPP_Command_data_sm_resp extends Net_SMPP_Command
+class Net_SMPP_Command_Data_Sm_Resp extends Net_SMPP_Command
 {
     /**
      * This field contains the SMSC assigned message ID of the short message.
