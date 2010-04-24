@@ -455,7 +455,6 @@ class Net_SMPP_Command extends Net_SMPP_PDU
             $lenf = $this->_defs[$field]['lenField'];
             $len = $this->$lenf;
         }
-
         $this->$field = substr($data, $pos, $len);
         $pos += $len;
     }
@@ -521,6 +520,7 @@ class Net_SMPP_Command extends Net_SMPP_PDU
      * @return  void
      * @access  protected
      */
+
     function parseOptionalParams($data)
     {
         $oparams =& Net_SMPP_Command::_optionalParams();
@@ -537,15 +537,23 @@ class Net_SMPP_Command extends Net_SMPP_PDU
         $pos = 0;
         while ($pos < $dl) {
             $type = implode(null, unpack('n', substr($data, $pos, 2)));
-            $field = array_search($type, $oparams);
+            
+            if ($this->isVendor()) {
+                $v =& Net_SMPP_Vendor::singleton($this->vendor);
+                $voparams =& $v->_optionalParams();
+                $field = array_search($type, $voparams);
+            } else {
+                $field = array_search($type, $oparams);
+            }
+            
             $pos += 2;
             if ($field == null || $field == false) {
-                // FIXME - error/warning here
                 return;
             }
 
             $len = implode(null, unpack('n', substr($data, $pos, 2)));
             $pos += 2;
+            
             switch ($this->_defs[$field]['type']) {
                 case 'int':
                     $this->_parseInt($field, $data, $pos);

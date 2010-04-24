@@ -164,7 +164,7 @@ class Net_SMPP_Vendor {
      * @since    Net_SMPP 0.4.0
      * @static
      */
-    function &factory($vendor)
+    function factory($vendor)
     {
         $file = 'Net/SMPP/Vendor/' . $vendor . '.php';
         include_once $file;
@@ -176,6 +176,7 @@ class Net_SMPP_Vendor {
         return new $class;
     }
 
+
     /**
      * Determine if there is a vendor PDU for a command
      *
@@ -185,8 +186,20 @@ class Net_SMPP_Vendor {
      */
     function PDUexists($vendor, $command)
     {
-        $file = 'Net/SMPP/Vendor/' . $vendor . '.php';
-        return file_exists($file);
+        $file = 'Net/SMPP/Vendor/' . $vendor . '/'. $command .'.php';
+       
+        $paths = explode(':', get_include_path());
+        foreach ($paths as $path) {
+            if (substr($path, -1) == '/') {
+                $fullpath = $path.$file;
+            } else {
+                $fullpath = $path.'/'.$file;
+            }
+            if (file_exists($fullpath)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -198,7 +211,7 @@ class Net_SMPP_Vendor {
      * @see     Net_SMPP_PDU::factory()
      * @static
      */
-    function &PDU($vendor, $command, $args = array())
+    function PDU($vendor, $command, $args = array())
     {
         $file = dirname(__FILE__) . '/Vendor/' . $vendor . '/' . $command . '.php';
         $class = 'Net_SMPP_Command_Vendor_' . $vendor . '_' . $command;

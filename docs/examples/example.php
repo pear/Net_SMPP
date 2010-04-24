@@ -1,5 +1,7 @@
 <?php
 
+ini_set('include_path', '/home/silo/Projects/PEAR/SMPP/trunk:/usr/share/php:/usr/share/pear');
+
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
